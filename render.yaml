@@ -1,0 +1,17 @@
+# =============================================================================
+# Render.com Deployment Configuration
+# =============================================================================
+# This file tells Render how to build and run the MalariaNet web service.
+# Place best_model.pth in the repo root (or use Render Disk for large files).
+# =============================================================================
+
+services:
+  - type: web
+    name: malarianet
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.7"

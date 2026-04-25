@@ -1,0 +1,34 @@
+[project]
+name = "malarianet"
+version = "1.0.0"
+description = "Malaria detection from red blood cell images using CNN (MobileNetV2)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-multipart>=0.0.6",
+    "grad-cam>=1.5.0",
+    "scikit-learn>=1.3.0",
+    "pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.13.0",
+    "jupyter>=1.0.0",
+    "opencv-python-headless>=4.8.0",
+    "jupyterlab>=4.5.6",
+    "psutil>=7.2.2",
+]
+
+# Tell uv to pull torch/torchvision from the CUDA 12.8 index instead of PyPI.
+# PyPI only has CPU builds; the official PyTorch index has GPU builds.
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }

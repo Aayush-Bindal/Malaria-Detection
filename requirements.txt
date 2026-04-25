@@ -1,0 +1,27 @@
+# =============================================================================
+# MalariaNet — Requirements (CPU-only for Render.com deployment)
+# =============================================================================
+# Generated for deployment. For local dev with GPU, use: uv add torch torchvision
+# For Render.com (CPU-only), this file pins CPU-only PyTorch builds.
+#
+# To regenerate from pyproject.toml:
+#   uv pip compile pyproject.toml -o requirements.txt
+# =============================================================================
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch
+torchvision
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+grad-cam>=1.5.0
+scikit-learn>=1.3.0
+pillow>=10.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+jupyter>=1.0.0
+jupyterlab>=4.5.0
+opencv-python-headless>=4.8.0
+psutil>=7.0.0
