@@ -1,6 +1,6 @@
 """
 MalariaNet — FastAPI Backend
-=============================
+
 Serves the malaria detection web app with:
 - GET /        → serves the frontend (templates/index.html)
 - POST /predict → accepts an uploaded cell image, returns prediction + Grad-CAM
@@ -28,9 +28,9 @@ from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.image import show_cam_on_image
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 
-# ---------------------------------------------------------------------------
+
 # Configuration
-# ---------------------------------------------------------------------------
+
 
 MODEL_PATH = "best_model.pth"
 CLASS_NAMES = ["Parasitized", "Uninfected"]
@@ -47,9 +47,9 @@ inference_transform = transforms.Compose([
     transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
 ])
 
-# ---------------------------------------------------------------------------
+
 # Model loading (runs once at startup)
-# ---------------------------------------------------------------------------
+
 
 # Global references — populated by the lifespan handler
 model = None
@@ -90,9 +90,9 @@ def load_model():
     return mdl, dev, gcam
 
 
-# ---------------------------------------------------------------------------
+
 # Lifespan — load model once, keep it in memory for all requests
-# ---------------------------------------------------------------------------
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -124,9 +124,9 @@ async def lifespan(app: FastAPI):
     torch.cuda.empty_cache() if torch.cuda.is_available() else None
 
 
-# ---------------------------------------------------------------------------
+
 # FastAPI app
-# ---------------------------------------------------------------------------
+
 
 app = FastAPI(
     title="MalariaNet",
@@ -151,9 +151,9 @@ if static_dir.exists():
     app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-# ---------------------------------------------------------------------------
+
 # Routes
-# ---------------------------------------------------------------------------
+
 
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend():
@@ -268,9 +268,9 @@ async def predict(file: UploadFile = File(...)):
         )
 
 
-# ---------------------------------------------------------------------------
+
 # Run with uvicorn when executed directly
-# ---------------------------------------------------------------------------
+
 
 if __name__ == "__main__":
     import uvicorn
