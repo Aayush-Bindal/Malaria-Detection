@@ -1,9 +1,9 @@
-# =============================================================================
+
 # Render.com Deployment Configuration
-# =============================================================================
+
 # This file tells Render how to build and run the MalariaNet web service.
 # Place best_model.pth in the repo root (or use Render Disk for large files).
-# =============================================================================
+
 
 services:
   - type: web
