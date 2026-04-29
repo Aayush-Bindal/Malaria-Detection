@@ -20,8 +20,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0f1e;
-            color: #e6edf3;
+            background-color: #f3f7fc;
+            color: #16314d;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -32,8 +32,8 @@
            HEADER
            ============================================================ */
         header {
-            background-color: #111827;
-            border-bottom: 1px solid #1f2937;
+            background-color: #ffffff;
+            border-bottom: 1px solid #d8e4f2;
             padding: 24px 20px;
             text-align: center;
         }
@@ -41,16 +41,16 @@
         header h1 {
             font-size: 1.75rem;
             font-weight: 700;
-            color: #e6edf3;
+            color: #15304a;
             letter-spacing: -0.5px;
         }
 
         header h1 span {
-            color: #00d4aa;
+            color: #2563eb;
         }
 
         header p {
-            color: #8b949e;
+            color: #5f748c;
             font-size: 0.9rem;
             margin-top: 6px;
         }
@@ -71,20 +71,20 @@
            Drag-and-drop area with dashed border.
            ============================================================ */
         .upload-zone {
-            border: 2px dashed #30363d;
+            border: 2px dashed #bfd0e4;
             border-radius: 12px;
             padding: 48px 24px;
             text-align: center;
             cursor: pointer;
             transition: border-color 0.2s ease, background-color 0.2s ease;
-            background-color: #111827;
+            background-color: #ffffff;
             position: relative;
         }
 
         .upload-zone:hover,
         .upload-zone.drag-over {
-            border-color: #00d4aa;
-            background-color: #0d1520;
+            border-color: #2563eb;
+            background-color: #edf4ff;
         }
 
         .upload-zone svg {
@@ -92,29 +92,29 @@
             height: 56px;
             margin-bottom: 16px;
             fill: none;
-            stroke: #30363d;
+            stroke: #8aa4c0;
             stroke-width: 1.5;
         }
 
         .upload-zone:hover svg,
         .upload-zone.drag-over svg {
-            stroke: #00d4aa;
+            stroke: #2563eb;
         }
 
         .upload-zone h3 {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #e6edf3;
+            color: #15304a;
             margin-bottom: 6px;
         }
 
         .upload-zone p {
-            color: #8b949e;
+            color: #5f748c;
             font-size: 0.85rem;
         }
 
         .file-name {
-            color: #00d4aa;
+            color: #2563eb;
             font-size: 0.9rem;
             font-weight: 500;
             margin-top: 12px;
@@ -139,8 +139,8 @@
             max-width: 280px;
             margin: 24px auto 0;
             padding: 14px 24px;
-            background-color: #00d4aa;
-            color: #0a0f1e;
+            background-color: #2563eb;
+            color: #ffffff;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             font-weight: 600;
@@ -151,12 +151,12 @@
         }
 
         .btn-analyse:hover {
-            background-color: #00b894;
+            background-color: #1d4ed8;
         }
 
         .btn-analyse:disabled {
-            background-color: #1f2937;
-            color: #4b5563;
+            background-color: #d6e2f1;
+            color: #7a8ca3;
             cursor: not-allowed;
         }
 
@@ -176,8 +176,8 @@
         .spinner {
             width: 40px;
             height: 40px;
-            border: 3px solid #1f2937;
-            border-top-color: #00d4aa;
+            border: 3px solid #d3dfec;
+            border-top-color: #2563eb;
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
             margin: 0 auto 12px;
@@ -188,7 +188,7 @@
         }
 
         .spinner-container p {
-            color: #8b949e;
+            color: #5f748c;
             font-size: 0.9rem;
         }
 
@@ -197,12 +197,12 @@
            ============================================================ */
         .error-msg {
             display: none;
-            background-color: #1c1017;
-            border: 1px solid #ff4757;
+            background-color: #fff2f5;
+            border: 1px solid #e4687a;
             border-radius: 8px;
             padding: 14px 20px;
             margin-top: 24px;
-            color: #ff4757;
+            color: #c93d57;
             font-size: 0.9rem;
             text-align: center;
         }
@@ -218,8 +218,8 @@
         .results-panel {
             display: none;
             margin-top: 32px;
-            background-color: #111827;
-            border: 1px solid #1f2937;
+            background-color: #ffffff;
+            border: 1px solid #d8e4f2;
             border-radius: 12px;
             padding: 28px;
         }
@@ -232,7 +232,7 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 24px;
-            color: #e6edf3;
+            color: #15304a;
             text-align: center;
         }
 
@@ -259,7 +259,7 @@
         .result-image-col p {
             text-align: center;
             font-size: 0.75rem;
-            color: #8b949e;
+            color: #5f748c;
             margin-top: 6px;
         }
 
@@ -281,13 +281,13 @@
         }
 
         .result-badge.infected {
-            background-color: #ff4757;
+            background-color: #d83d5e;
             color: #ffffff;
         }
 
         .result-badge.healthy {
-            background-color: #00d4aa;
-            color: #0a0f1e;
+            background-color: #2563eb;
+            color: #ffffff;
         }
 
         /* Confidence bar */
@@ -297,14 +297,14 @@
 
         .confidence-label {
             font-size: 0.85rem;
-            color: #8b949e;
+            color: #5f748c;
             margin-bottom: 6px;
         }
 
         .confidence-bar-bg {
             width: 100%;
             height: 28px;
-            background-color: #1f2937;
+            background-color: #e3ebf5;
             border-radius: 6px;
             overflow: hidden;
             position: relative;
@@ -317,11 +317,11 @@
         }
 
         .confidence-bar-fill.infected {
-            background-color: #ff4757;
+            background-color: #d83d5e;
         }
 
         .confidence-bar-fill.healthy {
-            background-color: #00d4aa;
+            background-color: #2563eb;
         }
 
         .confidence-bar-text {
@@ -343,25 +343,25 @@
             width: 224px;
             height: 224px;
             border-radius: 8px;
-            border: 1px solid #1f2937;
+            border: 1px solid #d8e4f2;
             display: block;
         }
 
         .gradcam-section .gradcam-label {
             font-size: 0.75rem;
-            color: #8b949e;
+            color: #5f748c;
             margin-top: 6px;
         }
 
         /* Explanation text */
         .explanation {
             font-size: 0.88rem;
-            color: #8b949e;
+            color: #5f748c;
             line-height: 1.6;
             margin-top: 16px;
             padding: 14px;
-            background-color: #0a0f1e;
-            border: 1px solid #1f2937;
+            background-color: #f7fbff;
+            border: 1px solid #d8e4f2;
             border-radius: 8px;
         }
 
@@ -371,8 +371,8 @@
         footer {
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #1f2937;
-            color: #4b5563;
+            border-top: 1px solid #d8e4f2;
+            color: #6a7f97;
             font-size: 0.8rem;
         }
 
