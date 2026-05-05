@@ -269,4 +269,4 @@ Malaria detection from red blood cell images using CNN/
 
 ## License
 
-This project is for educational purposes only. It is **not** a medical device and should not be used for clinical diagnosis.
+This project is for educational purposes only. It is **not** a medical device and should not be used for clinical diagnosis
